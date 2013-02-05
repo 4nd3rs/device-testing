@@ -9,15 +9,17 @@
 		<header><h1>PixelRatio test</h1></header>
 		PixelRatio: <span id="hit-me"></span> <br/>
 		Debug: <span id="debug"></span>
+		DPPX: <span id="dppx"></span>
+		DPI: <span id="dpi"></span>
 
 		<script>
 			function pixelRatio() {
   				if ( window.devicePixelRatio ) {
 					return window.devicePixelRatio;
 				} else if( "matchMedia" in window && window.matchMedia ) {
-					if ( window.matchMedia("(min-resolution:2dppx)").matches || window.matchMedia("(min-resolution:192dpi)").matches ) {
+					if ( window.matchMedia("(min-resolution: 2dppx)").matches || window.matchMedia("(min-resolution: 192dpi)").matches ) {
 						return 2;
-					} else if ( window.matchMedia("(min-resolution:1.5dppx)").matches || window.matchMedia("(min-resolution:144dpi)").matches ) {
+					} else if ( window.matchMedia("(min-resolution: 1.5dppx)").matches || window.matchMedia("(min-resolution: 144dpi)").matches ) {
 						return 1.5;
 					}
 				}
@@ -26,6 +28,8 @@
   
   		document.getElementById("hit-me").innerHTML = pixelRatio();
 		document.getElementById("debug").innerHTML = "matchMedia" in window && window.matchMedia ? "Matchmedia true" : "MatchMedia false";
+		document.getElementById("dppx").innerHTML = window.matchMedia("(min-resolution:1dppx)").matches ? "dppx true" : "dppx false";
+		document.getElementById("dpi").innerHTML = window.matchMedia("(min-resolution:1dpi)").matches ? "dpi true" : "dpi false";
 		</script>
 	</body>
 </html>	
