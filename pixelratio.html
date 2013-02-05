@@ -1,0 +1,34 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>SVG test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	</head>
+	<body>
+		<header><h1>PixelRatio test</h1></header>
+		PixelRatio: <span id="hit-me"></span> <br/>
+		Debug: <span id="debug"></span>
+
+		<script>
+			function pixelRatio() {
+  				if ( window.devicePixelRatio ) {
+					return window.devicePixelRatio;
+				} else if( "matchMedia" in window && window.matchMedia("") ) {
+					if ( window.matchMedia("(min-resolution:2dppx)").matches || window.matchMedia("(min-resolution:192dpi)").matches ) {
+						return 2;
+					} else if ( window.matchMedia("(min-resolution:1.5dppx)").matches || window.matchMedia("(min-resolution:144dpi)").matches ) {
+						return 1.5;
+					}
+				}
+			return 1;
+			}
+  
+  		document.getElementById("hit-me").innerHTML = pixelRatio();
+		document.getElementById("debug").innerHTML = "matchMedia" in window && window.matchMedia("") ? "Matchmedia true" : "MatchMedia false";
+		</script>
+	</body>
+</html>	
+
+
+
