@@ -14,7 +14,7 @@
 			function pixelRatio() {
   				if ( window.devicePixelRatio ) {
 					return window.devicePixelRatio;
-				} else if( "matchMedia" in window && window.matchMedia("") ) {
+				} else if( "matchMedia" in window && window.matchMedia ) {
 					if ( window.matchMedia("(min-resolution:2dppx)").matches || window.matchMedia("(min-resolution:192dpi)").matches ) {
 						return 2;
 					} else if ( window.matchMedia("(min-resolution:1.5dppx)").matches || window.matchMedia("(min-resolution:144dpi)").matches ) {
@@ -25,7 +25,7 @@
 			}
   
   		document.getElementById("hit-me").innerHTML = pixelRatio();
-		document.getElementById("debug").innerHTML = "matchMedia" in window && window.matchMedia("") ? "Matchmedia true" : "MatchMedia false";
+		document.getElementById("debug").innerHTML = "matchMedia" in window && window.matchMedia ? "Matchmedia true" : "MatchMedia false";
 		</script>
 	</body>
 </html>	
