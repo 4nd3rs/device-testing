@@ -13,6 +13,9 @@
 				-webkit-user-select: none;
 				   -moz-user-select: none;
 				   		user-select: none;
+
+				-webkit-user-drag: none;
+						user-drag: none;
 			}
 		</style>
 
@@ -42,6 +45,15 @@
 
 
 		<script type="text/javascript">
+
+			var divs = document.getElementsByTagName("div");
+			
+			for(var i = 0; i < divs.length; i++) {
+				divs[i].addEventListener("selectstart", function() {
+					console.log("selectstart: " + divs[i]);
+				},true);
+			}
+			
 
 
 		</script>
