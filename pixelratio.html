@@ -10,9 +10,14 @@
 		PixelRatio: <span id="hit-me"></span> <br/>
 		Debug: <span id="debug"></span><br/>
 		DPPX: <span id="dppx"></span><br/>
-		DPI 96: <span id="dpi"></span>
-		DPI 144: <span id="dpi-1"></span>
-		DPI 192: <span id="dpi-2"></span>
+		DPI 96: <span id="dpi"></span><br/>
+		DPI 144: <span id="dpi-1"></span><br/>
+		DPI 192: <span id="dpi-2"></span><br/>
+
+		window.navigator.msPointerEnabled <span id="dpi-2"></span><br/>
+
+		<div style="width:150px; height:150px; background-color:pink"></div>
+
 
 		<script>
 			function pixelRatio() {
@@ -34,6 +39,11 @@
 		document.getElementById("dpi").innerHTML = window.matchMedia("(min-resolution: 96dpi)").matches ? "yep" : " nope";
 		document.getElementById("dpi-1").innerHTML = window.matchMedia("(min-resolution: 144dpi)").matches ? "yep" : "nope";
 		document.getElementById("dpi-2").innerHTML = window.matchMedia("(min-resolution: 192dpi)").matches ? "yep" : "nope";
+
+		var msPointerEnabled = window.navigator.msPointerEnabled,
+		event.pointerType
+
+
 		</script>
 	</body>
 </html>	
