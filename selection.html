@@ -49,9 +49,11 @@
 			var divs = document.getElementsByTagName("div");
 			
 			for(var i = 0; i < divs.length; i++) {
+				divs[i].unselectable = "on";
 				divs[i].addEventListener("selectstart", function() {
 					console.log("selectstart: " + divs[i]);
-				},true);
+					alert("selectstart");
+				}, true );
 			}
 			
 
