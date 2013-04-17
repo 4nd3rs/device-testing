@@ -16,11 +16,34 @@ img{
     -webkit-animation-iteration-count:  infinite;
     -webkit-animation-timing-function:  steps(12,end);
     }
+
+.spinner {
+ -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps(12,end);
+  content: "abc";
+  display: block;
+  background-image: url('spinner_black.svg');
+  background-position: 50% 50%;
+  background-size:100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 30px;
+  height:30px;
+  top: 50%;
+  left:50%;
+  margin-left:-15px;
+  margin-top:-15px;
+}
+
 </style>
 <body>
 <div>
 
 <img src="spinner_black.svg">
+
+<div class="spinner"></div>
 
 </body>
 </html>
