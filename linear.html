@@ -1,0 +1,85 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>SVG test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		body {
+			color: #000;
+			font-family: Arial,Helvetica,Verdana,Geneva,sans-serif;
+			font-size: 15px;
+			line-height: 1.2;
+			}
+
+			.abTopNav {
+			position: relative;
+			font-size: 108%;
+			background: rgba(255,255,255,0.12) none no-repeat 0 0;
+			background: none no-repeat 0 0,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0)),to(rgba(255,255,255,0.12)));
+			background: none no-repeat 0 0,-webkit-linear-gradient(top,rgba(255,255,255,0),rgba(255,255,255,0.12));
+			background: none no-repeat 0 0,-moz-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.12));
+			background: none no-repeat 0 0,-o-linear-gradient(top,rgba(255,255,255,0),rgba(255,255,255,0.12));
+			background: none no-repeat 0 0,-khtml-gradient(linear,left top,left bottom,from(rgba(255,255,255,0)),to(rgba(255,255,255,0.12)));
+			}
+						.abThemeBgGradient {
+				background-color: #ce181e;
+				color: #fff;
+				}
+			.abTopNav ul {
+display: table;
+width: 100%;
+}
+nav ul, nav ol {
+list-style: none;
+list-style-image: none;
+}
+ul, ol {
+margin: 0;
+padding: 0;
+}
+.abTopNav .abSel {
+background-color: #000;
+position: relative;
+}
+.abTopNav li {
+border: 1px solid rgba(0,0,0,0.15);
+border-left-width: 0;
+display: table-cell;
+text-align: center;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+vertical-align: middle;
+width: 10%;
+}
+.abTopNav li:first-child a {
+border-left: 0;
+}
+.abTopNav .abSel a {
+border: 0;
+}.abTopNav li a {
+border-left: 1px solid rgba(255,255,255,0.2);
+color: #fff;
+display: block;
+padding: 7px 10px;
+}.abTopNav li {
+text-align: center;
+text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+		</style>
+	</head>
+	<body>
+	<header class="abHeader">
+		<a href="#abBottomMenu" id="abNavBarTopBtnLink" class="abMenuBtn abIco-btn-menu" title="Meny"></a>
+		<a id="abLogo" href="/">
+			<div class="abIC-logo abIco-logo-aftonbladet-beta"></div>
+		</a>
+	</header>	
+	<nav class="abTopNav abThemeBgGradient">
+		<ul>
+			<li class="abSel"><a href="http://10.12.2.24:8080/">Start</a></li>
+			<li><a href="http://10.12.2.24:8080/sportbladet/">Sport</a></li>
+			<li><a href="http://10.12.2.24:8080/nojesbladet/">Noje</a></li>
+			<li><a href="http://aftonbladettv.se"><span title="TV" class="abNavIcon abIco-logo-tv">TV</span></a></li>
+		</ul>
+	</nav>
+	</body>
+</html>	
